@@ -1,15 +1,17 @@
-import img1 from "@/assets/images/BeachPlace1.JPG";
-import img2 from "@/assets/images/BeachPlace2.JPG";
-import img3 from "@/assets/images/BeachPlace3.JPG";
-import img4 from "@/assets/images/BeachPlace4.JPG";
-import img5 from "@/assets/images/HomeStaging1.jpg";
-import img6 from "@/assets/images/HomeStaging2.jpg";
-import img7 from "@/assets/images/HomeStaging3.jpg";
-import img8 from "@/assets/images/HomeStaging4.jpg";
-import img9 from "@/assets/images/Army1.jpg";
-import img10 from "@/assets/images/Army2.jpg";
-import img11 from "@/assets/images/Army3.jpg";
-import img12 from "@/assets/images/Army4.jpg";
+import img1 from "@/assets/images/BeachPlace1.jpg?w=1200&format=webp";
+import img2 from "@/assets/images/BeachPlace2.jpg?w=1200&format=webp";
+import img3 from "@/assets/images/BeachPlace3.jpg?w=1200&format=webp";
+import img4 from "@/assets/images/BeachPlace4.jpg?w=1200&format=webp";
+
+import img5 from "@/assets/images/HomeStaging1.jpg?w=1200&format=webp";
+import img6 from "@/assets/images/HomeStaging2.jpg?w=1200&format=webp";
+import img7 from "@/assets/images/HomeStaging3.jpg?w=1200&format=webp";
+import img8 from "@/assets/images/HomeStaging4.jpg?w=1200&format=webp";
+
+import img9 from "@/assets/images/Army1.jpg?w=1200&format=webp";
+import img10 from "@/assets/images/Army2.jpg?w=1200&format=webp";
+import img11 from "@/assets/images/Army3.jpg?w=1200&format=webp";
+import img12 from "@/assets/images/Army4.jpg?w=1200&format=webp";
 
 export const commercialProjects = [
   {

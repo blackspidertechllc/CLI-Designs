@@ -1,12 +1,14 @@
-import img1 from "@/assets/images/HomeTheatre1.jpg";
-import img2 from "@/assets/images/HomeTheatre2.jpg";
-import img3 from "@/assets/images/HomeTheatre3.jpg";
-import img4 from "@/assets/images/HomeOffice1.jpg";
-import img5 from "@/assets/images/HomeOffice2.jpg";
-import img6 from "@/assets/images/HomeOffice3.jpg";
-import img7 from "@/assets/images/HomeBath1.jpg";
-import img8 from "@/assets/images/HomeBath2.jpg";
-import img9 from "@/assets/images/HomeBath3.jpg";
+import img1 from "@/assets/images/HomeTheatre1.jpg?w=1200&format=webp";
+import img2 from "@/assets/images/HomeTheatre2.jpg?w=1200&format=webp";
+import img3 from "@/assets/images/HomeTheatre3.jpg?w=1200&format=webp";
+
+import img4 from "@/assets/images/HomeOffice1.jpg?w=1200&format=webp";
+import img5 from "@/assets/images/HomeOffice2.jpg?w=1200&format=webp";
+import img6 from "@/assets/images/HomeOffice3.jpg?w=1200&format=webp";
+
+import img7 from "@/assets/images/HomeBath1.jpg?w=1200&format=webp";
+import img8 from "@/assets/images/HomeBath2.jpg?w=1200&format=webp";
+import img9 from "@/assets/images/HomeBath3.jpg?w=1200&format=webp";
 
 export const residentialProjects = [
   {

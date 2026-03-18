@@ -1,23 +1,27 @@
 export default function ServiceCard({ title, description, image }) {
   return (
-    <div className="flex w-full max-w-sm flex-col overflow-hidden rounded-3xl border border-black/10 bg-brand-white/95 shadow-md transition-shadow hover:shadow-lg">
-      <div className="h-56 w-full overflow-hidden sm:h-64">
+    <article className="w-full max-w-sm overflow-hidden rounded-3xl border border-black/10 bg-brand-white/95 shadow-sm transition duration-300 hover:shadow-md">
+      <div className="aspect-[4/3] overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="h-full w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+          loading="lazy"
+          decoding="async"
+          width="900"
+          height="675"
+          className="h-full w-full object-cover transition duration-500 hover:scale-[1.03]"
         />
       </div>
 
-      <div className="flex flex-col gap-4 p-8">
-        <h3 className="font-brand text-xl font-bold leading-[1.2] text-text-black sm:text-2xl">
+      <div className="p-6">
+        <h3 className="font-brand text-2xl font-semibold text-text-black">
           {title}
         </h3>
 
-        <p className="font-brand text-base leading-7 text-text-black/75">
+        <p className="mt-3 font-brand text-base leading-7 text-text-black/70">
           {description}
         </p>
       </div>
-    </div>
+    </article>
   );
 }

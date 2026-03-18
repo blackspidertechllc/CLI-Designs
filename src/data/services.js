@@ -1,6 +1,6 @@
-import residentialProjectsImg from "../assets/images/residentialprojects.webp";
-import conceptDevelopmentImg from "../assets/images/conceptDevelopment.jpg";
-import furnitureFinishesImg from "../assets/images/furniturefinishes.jpg";
+import residentialProjectsImg from "../assets/images/residentialprojects.webp?w=900&format=webp";
+import conceptDevelopmentImg from "../assets/images/conceptDevelopment.jpg?w=900&format=webp";
+import furnitureFinishesImg from "../assets/images/furniturefinishes.jpg?w=900&format=webp";
 
 export const services = [
   {
