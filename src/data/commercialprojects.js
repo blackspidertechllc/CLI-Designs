@@ -19,7 +19,7 @@ export const commercialProjects = [
 
     title: "The Beach Place",
 
-    description: "Partnered with Asha Green-Cox",
+    description: "Partnered with Asha Green",
 
     // projectUrl: "/projects/cli-brand-identity",
 
