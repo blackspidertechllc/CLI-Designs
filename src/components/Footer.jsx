@@ -5,36 +5,42 @@ const footerLinks = [
   { to: "/projects", label: "Projects" },
   { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact us" },
+  { to: "/contact", label: "Contact Us" },
 ];
 
 export default function Footer() {
   const navLinkClass = ({ isActive }) =>
     [
-      "group inline-flex w-fit items-center font-brand text-base font-semibold text-text-black transition duration-200",
-      isActive ? "opacity-100" : "opacity-85 hover:opacity-100",
+      "group inline-flex w-fit items-center font-brand text-sm font-semibold uppercase tracking-[0.14em] transition duration-300",
+      "text-[#f5efe6]",
+      isActive ? "opacity-100" : "opacity-75 hover:opacity-100",
     ].join(" ");
 
   return (
-    <footer className="relative overflow-hidden border-t border-black/10 bg-brand-white/95">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(0,0,0,0.04),transparent_70%)]" />
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#111111]">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(201,183,155,0.10),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.03),transparent_35%)]" />
 
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-12">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-start lg:gap-16">
-          {/* Logo */}
-          <div className="flex items-start">
-            <NavLink to="/" end className="inline-flex">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-12 lg:py-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.15fr_0.85fr] md:items-start lg:gap-16">
+          {/* Logo / Brand */}
+          <div className="flex flex-col gap-6">
+            <NavLink to="/" end className="inline-flex w-fit">
               <img
                 src={CLILOGO}
                 alt="CLI Designs logo"
-                className="h-24 w-auto object-contain sm:h-28 lg:h-32"
+                className="h-20 w-auto object-contain sm:h-24 lg:h-28"
               />
             </NavLink>
+
+            <p className="max-w-md font-brand text-sm leading-7 text-[#d9d0c5] sm:text-base">
+              Interior spaces shaped with warmth, restraint, and a lasting sense
+              of atmosphere.
+            </p>
           </div>
 
           {/* Navigation */}
           <div className="md:justify-self-end">
-            <p className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55">
+            <p className="font-brand text-xs font-semibold uppercase tracking-[0.24em] text-[#c9b79b]/75">
               Navigation
             </p>
 
@@ -47,7 +53,7 @@ export default function Footer() {
                         {link.label}
                         <span
                           className={[
-                            "absolute left-0 -bottom-1 h-0.5 w-full origin-left rounded-full bg-current transition-transform duration-300 ease-out",
+                            "absolute left-0 -bottom-1 h-px w-full origin-left bg-[#c9b79b] transition-transform duration-300 ease-out",
                             isActive
                               ? "scale-x-100"
                               : "scale-x-0 group-hover:scale-x-100",
@@ -63,8 +69,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-black/10 pt-6">
-          <p className="font-brand text-sm text-text-black/65">
+        <div className="mt-10 border-t border-white/10 pt-6">
+          <p className="font-brand text-sm text-[#d9d0c5]/80">
             © {new Date().getFullYear()} CLI Designs. All rights reserved.
           </p>
         </div>
