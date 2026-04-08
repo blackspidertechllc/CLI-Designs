@@ -12,13 +12,13 @@ export default function Footer() {
   const navLinkClass = ({ isActive }) =>
     [
       "group inline-flex w-fit items-center font-brand text-sm font-semibold uppercase tracking-[0.14em] transition duration-300",
-      "text-[#f5efe6]",
+      "text-[#F3EEEA]",
       isActive ? "opacity-100" : "opacity-75 hover:opacity-100",
     ].join(" ");
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#111111]">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(201,183,155,0.10),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.03),transparent_35%)]" />
+    <footer className="relative overflow-hidden border-t border-[#CEB199]/20 bg-[#8A7969]">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(206,177,153,0.15),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(243,238,234,0.08),transparent_35%)]" />
 
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-12 lg:py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.15fr_0.85fr] md:items-start lg:gap-16">
@@ -32,7 +32,7 @@ export default function Footer() {
               />
             </NavLink>
 
-            <p className="max-w-md font-brand text-sm leading-7 text-[#d9d0c5] sm:text-base">
+            <p className="max-w-md font-brand text-sm leading-7 text-[#E8D6C6] sm:text-base">
               Interior spaces shaped with warmth, restraint, and a lasting sense
               of atmosphere.
             </p>
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div className="md:justify-self-end">
-            <p className="font-brand text-xs font-semibold uppercase tracking-[0.24em] text-[#c9b79b]/75">
+            <p className="font-brand text-xs font-semibold uppercase tracking-[0.24em] text-[#CEB199]/80">
               Navigation
             </p>
 
@@ -53,7 +53,7 @@ export default function Footer() {
                         {link.label}
                         <span
                           className={[
-                            "absolute left-0 -bottom-1 h-px w-full origin-left bg-[#c9b79b] transition-transform duration-300 ease-out",
+                            "absolute left-0 -bottom-1 h-px w-full origin-left bg-[#CEB199] transition-transform duration-300 ease-out",
                             isActive
                               ? "scale-x-100"
                               : "scale-x-0 group-hover:scale-x-100",
@@ -69,8 +69,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6">
-          <p className="font-brand text-sm text-[#d9d0c5]/80">
+        <div className="mt-10 border-t border-[#CEB199]/20 pt-6">
+          <p className="font-brand text-sm text-[#E8D6C6]/80">
             © {new Date().getFullYear()} CLI Designs. All rights reserved.
           </p>
         </div>

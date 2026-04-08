@@ -14,26 +14,26 @@ export default function Navbar() {
   const desktopLinkClass = ({ isActive }) =>
     [
       "relative inline-flex items-center px-1 py-1 font-brand text-sm font-semibold uppercase tracking-[0.16em]",
-      "text-[#f5efe6] transition duration-300",
+      "text-[#F3EEEA] transition duration-300",
       isActive ? "opacity-100" : "opacity-80 hover:opacity-100",
     ].join(" ");
 
   const mobileLinkClass = ({ isActive }) =>
     [
       "block rounded-2xl px-4 py-3 font-brand text-base font-semibold uppercase tracking-[0.14em]",
-      "text-[#f5efe6] transition duration-300",
+      "text-[#F3EEEA] transition duration-300",
       isActive
-        ? "bg-white/10 opacity-100"
-        : "opacity-80 hover:bg-white/5 hover:opacity-100",
+        ? "bg-[#F3EEEA]/15 opacity-100"
+        : "opacity-80 hover:bg-[#F3EEEA]/10 hover:opacity-100",
     ].join(" ");
 
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#111111]/55 backdrop-blur-md">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-[#CEB199]/20 bg-[#8A7969]/55 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-12">
         <NavLink
           to="/"
           end
-          className="whitespace-nowrap font-brand text-lg font-semibold uppercase tracking-[0.18em] text-[#f7f2eb] transition duration-300 hover:opacity-85 sm:text-xl"
+          className="whitespace-nowrap font-brand text-lg font-semibold uppercase tracking-[0.18em] text-[#F3EEEA] transition duration-300 hover:opacity-85 sm:text-xl"
           onClick={() => setMenuOpen(false)}
         >
           CLI Designs
@@ -48,7 +48,7 @@ export default function Navbar() {
                   {link.label}
                   <span
                     className={[
-                      "absolute -bottom-2 left-0 h-px w-full origin-left bg-[#c9b79b] transition-transform duration-300 ease-out",
+                      "absolute -bottom-2 left-0 h-px w-full origin-left bg-[#CEB199] transition-transform duration-300 ease-out",
                       isActive ? "scale-x-100" : "scale-x-0",
                     ].join(" ")}
                     aria-hidden="true"
@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-2 text-[#f7f2eb] transition duration-300 hover:bg-white/10 md:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-[#CEB199]/20 bg-[#F3EEEA]/10 p-2 text-[#F3EEEA] transition duration-300 hover:bg-[#F3EEEA]/20 md:hidden"
           aria-label={
             menuOpen ? "Close navigation menu" : "Open navigation menu"
           }
@@ -73,19 +73,19 @@ export default function Navbar() {
           <span className="relative block h-5 w-6">
             <span
               className={[
-                "absolute left-0 top-0 block h-0.5 w-6 bg-[#f7f2eb] transition-all duration-300",
+                "absolute left-0 top-0 block h-0.5 w-6 bg-[#F3EEEA] transition-all duration-300",
                 menuOpen ? "top-2 rotate-45" : "",
               ].join(" ")}
             />
             <span
               className={[
-                "absolute left-0 top-2 block h-0.5 w-6 bg-[#f7f2eb] transition-all duration-300",
+                "absolute left-0 top-2 block h-0.5 w-6 bg-[#F3EEEA] transition-all duration-300",
                 menuOpen ? "opacity-0" : "opacity-100",
               ].join(" ")}
             />
             <span
               className={[
-                "absolute left-0 top-4 block h-0.5 w-6 bg-[#f7f2eb] transition-all duration-300",
+                "absolute left-0 top-4 block h-0.5 w-6 bg-[#F3EEEA] transition-all duration-300",
                 menuOpen ? "top-2 -rotate-45" : "",
               ].join(" ")}
             />
@@ -97,7 +97,7 @@ export default function Navbar() {
       <div
         id="mobile-nav-menu"
         className={[
-          "overflow-hidden border-t border-white/10 bg-[#111111]/95 backdrop-blur-xl md:hidden",
+          "overflow-hidden border-t border-[#CEB199]/20 bg-[#8A7969]/95 backdrop-blur-xl md:hidden",
           "transition-all duration-300 ease-out",
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         ].join(" ")}
