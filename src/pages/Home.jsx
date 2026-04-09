@@ -129,11 +129,11 @@ export default function Home() {
       <section className="bg-[#E8D6C6] py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10">
-            <div className="overflow-hidden rounded-[2rem] border border-[#CEB199]/20 bg-[#F3EEEA]/50">
+            <div className="self-start overflow-hidden rounded-[2rem] border border-[#CEB199]/20 bg-[#F3EEEA]/50">
               <img
                 src={AboutPreviewImage}
                 alt="Portrait of Cassiana"
-                className="h-[520px] w-full object-cover object-[center_18%] sm:h-[620px] lg:h-[760px]"
+                className="h-[520px] w-full object-cover object-[center_8%] sm:h-[620px] sm:object-[center_12%] lg:h-[760px] lg:object-[center_18%]"
               />
             </div>
 
