@@ -24,49 +24,49 @@ export default function ContactUs() {
   };
 
   const fieldClassName =
-    "mt-2 w-full border-b border-black/15 bg-transparent py-3 font-brand text-text-black placeholder:text-text-black/35 outline-none transition focus:border-black";
+    "mt-2 w-full border-b border-tan/20 bg-transparent py-3 font-brand text-dusty-taupe placeholder:text-dusty-taupe/35 outline-none transition focus:border-dusty-taupe";
 
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(0,0,0,0.04),transparent_70%)]" />
+    <section className="relative overflow-hidden bg-parchment py-20 lg:py-28">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(138,121,105,0.08),transparent_70%)]" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start lg:gap-12">
           {/* Contact Info Card */}
-          <div className="rounded-3xl border border-black/10 bg-brand-white/95 p-8 shadow-md lg:p-10">
-            <p className="font-brand text-sm font-semibold uppercase tracking-[0.2em] text-text-black/55">
+          <div className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10">
+            <p className="font-brand text-sm font-semibold uppercase tracking-[0.2em] text-dusty-taupe/55">
               Contact
             </p>
 
-            <h1 className="mt-4 font-brand text-4xl font-bold leading-[1.15] text-text-black sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 font-brand text-4xl font-bold leading-[1.15] text-dusty-taupe sm:text-5xl lg:text-6xl">
               Contact us
             </h1>
 
-            <p className="mt-6 font-brand text-base leading-7 text-text-black/65 sm:text-lg">
+            <p className="mt-6 font-brand text-base leading-7 text-dusty-taupe/65 sm:text-lg">
               If you have any questions or comments, please contact us via email
               or phone, or send us a message using the contact form.
             </p>
 
             <div className="mt-10 space-y-8">
               <div>
-                <p className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55">
+                <p className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55">
                   Email
                 </p>
                 <a
                   href="mailto:email@example.com"
-                  className="mt-2 inline-block font-brand text-lg text-text-black transition-opacity hover:opacity-70"
+                  className="mt-2 inline-block font-brand text-lg text-dusty-taupe transition-opacity hover:opacity-70"
                 >
                   email@example.com
                 </a>
               </div>
 
               <div>
-                <p className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55">
+                <p className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55">
                   Phone
                 </p>
                 <a
                   href="tel:5555555555"
-                  className="mt-2 inline-block font-brand text-lg text-text-black transition-opacity hover:opacity-70"
+                  className="mt-2 inline-block font-brand text-lg text-dusty-taupe transition-opacity hover:opacity-70"
                 >
                   (555) 555-5555
                 </a>
@@ -77,13 +77,13 @@ export default function ContactUs() {
           {/* Contact Form Card */}
           <form
             onSubmit={handleSubmit}
-            className="rounded-3xl border border-black/10 bg-brand-white/95 p-8 shadow-md lg:p-10"
+            className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10"
           >
             <div className="grid gap-8">
               <div>
                 <label
                   htmlFor="name"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
                 >
                   Name
                 </label>
@@ -101,7 +101,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="email"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
                 >
                   Email
                 </label>
@@ -119,7 +119,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
                 >
                   Phone
                 </label>
@@ -137,7 +137,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="projectType"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
                 >
                   Project Type
                 </label>
@@ -158,7 +158,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="budget"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
                 >
                   Budget
                 </label>
@@ -180,7 +180,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="timeline"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
                 >
                   Timeline
                 </label>
@@ -201,7 +201,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="message"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-text-black/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
                 >
                   Message
                 </label>
@@ -218,7 +218,7 @@ export default function ContactUs() {
 
               <button
                 type="submit"
-                className="mt-2 inline-flex w-fit items-center rounded-2xl border border-black/10 px-6 py-3 font-brand font-semibold text-text-black transition-colors hover:bg-text-black hover:text-brand-white"
+                className="mt-2 inline-flex w-fit items-center rounded-2xl border border-tan/20 px-6 py-3 font-brand font-semibold text-dusty-taupe transition-colors hover:bg-dusty-taupe hover:text-parchment"
               >
                 Send Message
               </button>
