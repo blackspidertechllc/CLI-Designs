@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-[#CEB199]/20 bg-[#8A7969]/55 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-12">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-center px-4 sm:px-6 md:justify-between lg:px-12">
         <NavLink
           to="/"
           end
@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-[#CEB199]/20 bg-[#F3EEEA]/10 p-2 text-[#F3EEEA] transition duration-300 hover:bg-[#F3EEEA]/20 md:hidden"
+          className="absolute right-4 inline-flex items-center justify-center rounded-full border border-[#CEB199]/20 bg-[#F3EEEA]/10 p-2 text-[#F3EEEA] transition duration-300 hover:bg-[#F3EEEA]/20 md:hidden sm:right-6"
           aria-label={
             menuOpen ? "Close navigation menu" : "Open navigation menu"
           }
@@ -102,7 +102,7 @@ export default function Navbar() {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         ].join(" ")}
       >
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 sm:px-6">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-2 px-4 py-4 sm:px-6">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
