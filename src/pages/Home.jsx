@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router";
 import HeroImage from "@/assets/images/CLIHeader.webp";
 import AboutPreviewImage from "@/assets/images/CassieHeadShot.webp";
@@ -8,9 +9,24 @@ import { services } from "@/data/services";
 
 export default function Home() {
   const featuredProject = commercialProjects?.[0];
-  const splitSectionProject = commercialProjects?.[1] || commercialProjects?.[0];
+  const splitSectionProject =
+    commercialProjects?.[1] || commercialProjects?.[0];
   const featuredResidential = residentialProjects?.[0];
-  const featuredCommercial = commercialProjects?.[0];
+
+  const [curatedCommercial] = useState(() => {
+    if (!Array.isArray(commercialProjects) || commercialProjects.length === 0) {
+      return undefined;
+    }
+
+    if (commercialProjects.length === 1) {
+      return commercialProjects[0];
+    }
+
+    const curatedPool = commercialProjects.slice(1);
+    const randomIndex = Math.floor(Math.random() * curatedPool.length);
+
+    return curatedPool[randomIndex] || commercialProjects[0];
+  });
 
   const featuredPrimaryImage = featuredProject?.images?.[0]?.src || HeroImage;
 
@@ -24,8 +40,8 @@ export default function Home() {
     splitSectionProject?.images?.[0]?.src || HeroImage;
 
   const commercialSecondaryImage =
-    featuredCommercial?.images?.[1]?.src ||
-    featuredCommercial?.images?.[0]?.src ||
+    curatedCommercial?.images?.[1]?.src ||
+    curatedCommercial?.images?.[0]?.src ||
     HeroImage;
 
   return (
@@ -215,8 +231,9 @@ export default function Home() {
                 <img
                   src={commercialSecondaryImage}
                   alt={
-                    featuredCommercial?.images?.[1]?.alt ||
-                    featuredCommercial?.title ||
+                    curatedCommercial?.images?.[1]?.alt ||
+                    curatedCommercial?.images?.[0]?.alt ||
+                    curatedCommercial?.title ||
                     "Commercial interior project"
                   }
                   className="h-[340px] w-full object-cover sm:h-[420px] lg:h-[460px]"
@@ -228,11 +245,11 @@ export default function Home() {
                   </p>
 
                   <h3 className="mt-3 font-brand text-2xl font-semibold text-dusty-taupe sm:text-3xl">
-                    {featuredCommercial?.title || "Commercial Design"}
+                    {curatedCommercial?.title || "Commercial Design"}
                   </h3>
 
                   <p className="mt-4 font-brand text-base leading-7 text-dusty-taupe">
-                    {featuredCommercial?.description ||
+                    {curatedCommercial?.description ||
                       "Commercial interiors shaped with clarity, atmosphere, and a strong visual point of view."}
                   </p>
                 </div>

@@ -5,18 +5,19 @@ import { commercialProjects } from "@/data/commercialprojects";
 
 export default function ProjectsSection() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(0,0,0,0.04),transparent_70%)]" />
+    <section className="relative overflow-hidden bg-parchment py-20 lg:py-28">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(64,61,57,0.06),transparent_70%)]" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col gap-16 lg:gap-20">
+          {/* Residential */}
           <div className="flex flex-col gap-10 lg:gap-12">
             <div>
-              <h2 className="mt-4 font-brand text-4xl font-bold leading-[1.15] text-text-black sm:text-5xl">
+              <h2 className="mt-4 font-brand text-4xl font-semibold leading-[1.15] text-dusty-taupe sm:text-5xl">
                 Residential
               </h2>
 
-              <p className="mt-6 max-w-2xl font-brand text-base leading-7 text-text-black/65 sm:text-lg">
+              <p className="mt-6 max-w-2xl font-brand text-base leading-7 text-dusty-taupe/70 sm:text-lg">
                 Spaces designed for comfort, function, and everyday living.
               </p>
             </div>
@@ -32,13 +33,14 @@ export default function ProjectsSection() {
             </div>
           </div>
 
+          {/* Commercial */}
           <div className="flex flex-col gap-10 lg:gap-12">
             <div>
-              <h2 className="mt-4 font-brand text-4xl font-bold leading-[1.15] text-text-black sm:text-5xl">
+              <h2 className="mt-4 font-brand text-4xl font-semibold leading-[1.15] text-dusty-taupe sm:text-5xl">
                 Commercial
               </h2>
 
-              <p className="mt-6 max-w-2xl font-brand text-base leading-7 text-text-black/65 sm:text-lg">
+              <p className="mt-6 max-w-2xl font-brand text-base leading-7 text-dusty-taupe/70 sm:text-lg">
                 Interiors crafted to support brand experience and business
                 goals.
               </p>

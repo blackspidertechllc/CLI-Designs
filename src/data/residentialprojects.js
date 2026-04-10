@@ -15,7 +15,7 @@ export const residentialProjects = [
     id: 1,
     title: "Home Theatre",
     description:
-      "The client wanted the comfort that home exudes with all the amenities of a theatre so we decided on powered, reclined seats, fully blaack out drapes, projector with a full wall screen and an additional game room space equipped with poolt table, arcade games and more comfy seating to accommodate the entire family.",
+      "The client wanted the comfort that home exudes with all the amenities of a theatre, so we decided on powered reclined seats, fully black out drapes, a projector with a full wall screen and an additional game room space equipped with pool table, arcade games and more comfy seating to accommodate the entire family.",
     topLeftImage: img1,
     topRightImage: img2,
     bottomImage: img3,
