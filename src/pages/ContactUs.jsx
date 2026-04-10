@@ -33,7 +33,7 @@ export default function ContactUs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start lg:gap-12">
           {/* Contact Info Card */}
-          <div className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10">
+          <div className="rounded-3xl border border-tan/20 p-8 shadow-md lg:p-10">
             <p className="font-brand text-sm font-semibold uppercase tracking-[0.2em] text-dusty-taupe/55">
               Contact
             </p>
@@ -77,13 +77,13 @@ export default function ContactUs() {
           {/* Contact Form Card */}
           <form
             onSubmit={handleSubmit}
-            className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10"
+            className="rounded-3xl border border-tan/20 p-8 shadow-md lg:p-10"
           >
             <div className="grid gap-8">
               <div>
                 <label
                   htmlFor="name"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe"
                 >
                   Name
                 </label>
@@ -101,7 +101,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="email"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe"
                 >
                   Email
                 </label>
@@ -119,7 +119,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe"
                 >
                   Phone
                 </label>
@@ -137,7 +137,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="projectType"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe"
                 >
                   Project Type
                 </label>
@@ -158,7 +158,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="budget"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe"
                 >
                   Budget
                 </label>
@@ -180,7 +180,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="timeline"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe"
                 >
                   Timeline
                 </label>
@@ -201,7 +201,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="message"
-                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55"
+                  className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe"
                 >
                   Message
                 </label>
