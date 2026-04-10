@@ -140,18 +140,14 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-6">
               <div className="rounded-[2rem] border border-[#CEB199]/20 bg-[#F3EEEA]/45 p-8 sm:p-10 lg:p-12">
                 <p className="font-brand text-xs font-semibold uppercase tracking-[0.28em] text-[#8A7969] sm:text-sm">
-                  Studio
+                  The Designer
                 </p>
 
                 <h2 className="mt-4 max-w-2xl font-brand text-3xl font-semibold leading-[1.08] text-[#8A7969] sm:text-4xl lg:text-5xl">
-                  Design shaped by feeling, function, and quiet confidence.
-                </h2>
-
-                <p className="mt-6 max-w-2xl font-brand text-base leading-7 text-[#8A7969] sm:text-lg">
                   Cassiana brings a deeply thoughtful approach to interiors,
                   creating spaces that feel elevated, intentional, and personal
                   in the way they are lived in every day.
-                </p>
+                </h2>
 
                 <NavLink
                   to="/about"
