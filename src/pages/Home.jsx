@@ -7,21 +7,21 @@ import { commercialProjects } from "@/data/commercialprojects";
 import { services } from "@/data/services";
 
 export default function Home() {
+  const featuredProject = commercialProjects?.[0];
+  const splitSectionProject = commercialProjects?.[1] || commercialProjects?.[0];
   const featuredResidential = residentialProjects?.[0];
   const featuredCommercial = commercialProjects?.[0];
 
-  const residentialPrimaryImage =
-    featuredResidential?.bottomImage ||
-    featuredResidential?.topLeftImage ||
-    HeroImage;
+  const featuredPrimaryImage = featuredProject?.images?.[0]?.src || HeroImage;
 
   const residentialSecondaryImage =
     featuredResidential?.topLeftImage ||
     featuredResidential?.topRightImage ||
-    residentialPrimaryImage;
+    featuredResidential?.bottomImage ||
+    HeroImage;
 
   const commercialPrimaryImage =
-    featuredCommercial?.images?.[0]?.src || HeroImage;
+    splitSectionProject?.images?.[0]?.src || HeroImage;
 
   const commercialSecondaryImage =
     featuredCommercial?.images?.[1]?.src ||
@@ -88,11 +88,11 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-14">
             <div className="overflow-hidden rounded-[2rem] border border-tan/20 bg-almond-cream/40">
               <img
-                src={residentialPrimaryImage}
+                src={featuredPrimaryImage}
                 alt={
-                  featuredResidential?.bottomAlt ||
-                  featuredResidential?.title ||
-                  "Featured residential project"
+                  featuredProject?.images?.[0]?.alt ||
+                  featuredProject?.title ||
+                  "Featured project"
                 }
                 className="h-[420px] w-full object-cover sm:h-[520px] lg:h-[680px]"
               />
@@ -104,12 +104,12 @@ export default function Home() {
               </p>
 
               <h2 className="mt-4 font-brand text-3xl font-semibold leading-[1.05] text-dusty-taupe sm:text-4xl lg:text-5xl">
-                {featuredResidential?.title || "Selected Residential Work"}
+                {featuredProject?.title || "Selected Project"}
               </h2>
 
               <p className="mt-6 max-w-xl font-brand text-base leading-7 text-dusty-taupe sm:text-lg">
-                {featuredResidential?.description ||
-                  "A curated residential project defined by atmosphere, warmth, and intentional detail."}
+                {featuredProject?.description ||
+                  "A curated project defined by atmosphere, warmth, and intentional detail."}
               </p>
 
               <div className="mt-8">
@@ -161,9 +161,9 @@ export default function Home() {
                 <img
                   src={commercialPrimaryImage}
                   alt={
-                    featuredCommercial?.images?.[0]?.alt ||
-                    featuredCommercial?.title ||
-                    "Featured commercial project"
+                    splitSectionProject?.images?.[0]?.alt ||
+                    splitSectionProject?.title ||
+                    "Commercial project"
                   }
                   className="h-[240px] w-full object-cover sm:h-[300px] lg:h-[280px]"
                 />

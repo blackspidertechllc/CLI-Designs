@@ -22,7 +22,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
             {services.map((service) => (
               <ServiceCard
                 key={service.id}
