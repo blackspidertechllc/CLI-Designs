@@ -28,12 +28,12 @@ export default function ContactUs() {
 
   return (
     <section className="relative overflow-hidden bg-parchment py-20 lg:py-28">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(138,121,105,0.08),transparent_70%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(64,61,57,0.08),transparent_70%)]" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start lg:gap-12">
           {/* Contact Info Card */}
-          <div className="rounded-3xl border border-tan/20 p-8 shadow-md lg:p-10">
+          <div className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10">
             <p className="font-brand text-sm font-semibold uppercase tracking-[0.2em] text-dusty-taupe/55">
               Contact
             </p>
@@ -53,22 +53,10 @@ export default function ContactUs() {
                   Email
                 </p>
                 <a
-                  href="mailto:email@example.com"
+                  href="mailto:clidesignsltd@gmail.com"
                   className="mt-2 inline-block font-brand text-lg text-dusty-taupe transition-opacity hover:opacity-70"
                 >
-                  email@example.com
-                </a>
-              </div>
-
-              <div>
-                <p className="font-brand text-xs uppercase tracking-[0.15em] text-dusty-taupe/55">
-                  Phone
-                </p>
-                <a
-                  href="tel:5555555555"
-                  className="mt-2 inline-block font-brand text-lg text-dusty-taupe transition-opacity hover:opacity-70"
-                >
-                  (555) 555-5555
+                  clidesignsltd@gmail.com
                 </a>
               </div>
             </div>
@@ -77,7 +65,7 @@ export default function ContactUs() {
           {/* Contact Form Card */}
           <form
             onSubmit={handleSubmit}
-            className="rounded-3xl border border-tan/20 p-8 shadow-md lg:p-10"
+            className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10"
           >
             <div className="grid gap-8">
               <div>
@@ -218,7 +206,7 @@ export default function ContactUs() {
 
               <button
                 type="submit"
-                className="mt-2 inline-flex w-fit items-center rounded-2xl border border-tan/20 px-6 py-3 font-brand font-semibold text-dusty-taupe transition-colors hover:bg-dusty-taupe hover:text-parchment"
+                className="mt-2 inline-flex w-fit items-center rounded-2xl border border-tan/20 px-6 py-3 font-brand font-semibold text-dusty-taupe transition-colors hover:bg-deep-charcoal hover:text-parchment"
               >
                 Send Message
               </button>

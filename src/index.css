@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
-@theme {
+/* @theme {
   --font-brand: "Bodoni Moda", ui-sans-serif, system-ui, sans-serif;
   --color-dusty-taupe: #8a7969;
   --color-tan: #ceb199;
   --color-parchment: #f3eeea;
   --color-almond-cream: #e8d6c6;
+} */
+
+@theme {
+  --font-brand: "Bodoni Moda", ui-sans-serif, system-ui, sans-serif;
+  --color-dusty-taupe: #403d39;
+  --color-tan: #ccc5b9;
+  --color-parchment: #fffcf2;
+  --color-almond-cream: #f2eee6;
+  --color-accent: #368f8b;
+  --color-deep-charcoal: #252422;
 }
