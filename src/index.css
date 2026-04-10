@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-brand: "Neuton", ui-sans-serif, system-ui, sans-serif;
+  --font-brand: "Bodoni Moda", ui-sans-serif, system-ui, sans-serif;
   --color-dusty-taupe: #8a7969;
   --color-tan: #ceb199;
   --color-parchment: #f3eeea;
