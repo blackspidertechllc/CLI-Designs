@@ -13,9 +13,43 @@ import img10 from "@/assets/images/Army2.jpg?w=1200&format=webp";
 import img11 from "@/assets/images/Army3.jpg?w=1200&format=webp";
 import img12 from "@/assets/images/Army4.jpg?w=1200&format=webp";
 
+import img13 from "@/assets/images/Hisanna1.jpg?w=1200&format=webp";
+import img14 from "@/assets/images/Hisanna2.jpg?w=1200&format=webp";
+import img15 from "@/assets/images/Hisanna3.jpg?w=1200&format=webp";
+import img16 from "@/assets/images/Hisanna4.jpg?w=1200&format=webp";
+
 export const commercialProjects = [
   {
     id: 1,
+
+    title: "Hisanna Spa",
+
+    description:
+      "The client’s goal was to create a clean, calming space that felt both elevated and functional for everyday operations. We focused on a soft, modern aesthetic, integrating custom cabinetry, comfortable seating, and practical layouts for each service area. The final space balances beauty and efficiency, designed to enhance both the client experience and staff workflow.",
+
+    // projectUrl: "/projects/cli-brand-identity",
+
+    images: [
+      {
+        src: img13,
+        alt: "Hisanna Spa Image One",
+      },
+      {
+        src: img14,
+        alt: "Hisanna Spa Image Two",
+      },
+      {
+        src: img15,
+        alt: "Hisanna Spa Image Three",
+      },
+      {
+        src: img16,
+        alt: "Hisanna Spa Image Four",
+      },
+    ],
+  },
+  {
+    id: 2,
 
     title: "The Beach Place",
 
@@ -44,7 +78,7 @@ export const commercialProjects = [
   },
 
   {
-    id: 2,
+    id: 3,
 
     title: "Home Staging",
 
@@ -73,7 +107,7 @@ export const commercialProjects = [
   },
 
   {
-    id: 3,
+    id: 4,
 
     title: "Caesar's Army",
 
