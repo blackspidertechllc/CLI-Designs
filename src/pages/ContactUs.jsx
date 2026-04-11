@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ export default function ContactUs() {
     message: "",
   });
 
+  const [state, handleSubmit] = useForm("mdapqabv");
+
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -18,13 +21,29 @@ export default function ContactUs() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
   const fieldClassName =
     "mt-2 w-full border-b border-tan/20 bg-transparent py-3 font-brand text-dusty-taupe placeholder:text-dusty-taupe/35 outline-none transition focus:border-dusty-taupe";
+
+  if (state.succeeded) {
+    return (
+      <section className="relative overflow-hidden bg-parchment py-20 lg:py-28">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(64,61,57,0.08),transparent_70%)]" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+          <div className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10">
+            <p className="font-brand text-sm font-semibold uppercase tracking-[0.2em] text-dusty-taupe/55">
+              Thank You
+            </p>
+            <h1 className="mt-4 font-brand text-4xl font-bold leading-[1.15] text-dusty-taupe sm:text-5xl lg:text-6xl">
+              Message sent
+            </h1>
+            <p className="mt-6 font-brand text-base leading-7 text-dusty-taupe/65 sm:text-lg">
+              Thank you for reaching out. We’ll be in touch soon.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="relative overflow-hidden bg-parchment py-20 lg:py-28">
@@ -32,7 +51,6 @@ export default function ContactUs() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start lg:gap-12">
-          {/* Contact Info Card */}
           <div className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10">
             <p className="font-brand text-sm font-semibold uppercase tracking-[0.2em] text-dusty-taupe/55">
               Contact
@@ -62,9 +80,11 @@ export default function ContactUs() {
             </div>
           </div>
 
-          {/* Contact Form Card */}
           <form
-            onSubmit={handleSubmit}
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit(formData);
+            }}
             className="rounded-3xl border border-tan/20 bg-almond-cream p-8 shadow-md lg:p-10"
           >
             <div className="grid gap-8">
@@ -83,6 +103,7 @@ export default function ContactUs() {
                   onChange={handleChange}
                   placeholder="Your name"
                   className={fieldClassName}
+                  required
                 />
               </div>
 
@@ -101,6 +122,12 @@ export default function ContactUs() {
                   onChange={handleChange}
                   placeholder="you@example.com"
                   className={fieldClassName}
+                  required
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
                 />
               </div>
 
@@ -135,6 +162,7 @@ export default function ContactUs() {
                   value={formData.projectType}
                   onChange={handleChange}
                   className={fieldClassName}
+                  required
                 >
                   <option value="">Select</option>
                   <option value="residential">Residential Design</option>
@@ -201,15 +229,28 @@ export default function ContactUs() {
                   onChange={handleChange}
                   placeholder="Tell us a little about your project"
                   className={fieldClassName}
+                  required
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
                 />
               </div>
 
               <button
                 type="submit"
-                className="mt-2 inline-flex w-fit items-center rounded-2xl border border-tan/20 px-6 py-3 font-brand font-semibold text-dusty-taupe transition-colors hover:bg-deep-charcoal hover:text-parchment"
+                disabled={state.submitting}
+                className="mt-2 inline-flex w-fit items-center rounded-2xl border border-tan/20 px-6 py-3 font-brand font-semibold text-dusty-taupe transition-colors hover:bg-deep-charcoal hover:text-parchment disabled:opacity-50"
               >
-                Send Message
+                {state.submitting ? "Sending..." : "Send Message"}
               </button>
+
+              {state.errors?.length > 0 && (
+                <p className="font-brand text-sm text-dusty-taupe/70">
+                  Something went wrong. Please review the form and try again.
+                </p>
+              )}
             </div>
           </form>
         </div>
